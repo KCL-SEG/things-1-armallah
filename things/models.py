@@ -6,7 +6,9 @@ from django.core.validators import *
 
 
 class Thing(AbstractUser):
+    
     name = models.CharField(max_length=30, blank=False)
+    
     quantity = models.IntegerField(
         default=1,
         validators=[
@@ -14,6 +16,7 @@ class Thing(AbstractUser):
             MinValueValidator(1)
             ]
         ,blank=False)
+    
     desc =  models.CharField(max_length=120, blank=True, unique=False)
     
 
