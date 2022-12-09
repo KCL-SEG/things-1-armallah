@@ -16,7 +16,7 @@ class Thing(AbstractUser):
     desc =  models.CharField(max_length=120, blank=True)
     
     USERNAME_FIELD = 'name'
-    REQUIRED_FIELDS = ['name']
+    REQUIRED_FIELDS = []
 
 
 # Create your models here.
