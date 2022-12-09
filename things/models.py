@@ -13,7 +13,7 @@ class Thing(AbstractUser):
     
     quantity = models.PositiveIntegerField(default=1,blank=False, validators=[MinValueValidator(1), MaxValueValidator(100)])
     
-    desc =  models.CharField(max_length=120, blank=True)
+    description =  models.CharField(max_length=120, blank=True)
     
     USERNAME_FIELD = 'name'
     REQUIRED_FIELDS = []
